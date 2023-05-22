@@ -8,7 +8,7 @@ export const Search = () => {
   const [searchList, setSearchList] = useState([]); //data on onload
   const [filteredList, setFilteredList] = useState([]);
 
-  const API_URL = 'http://localhost:3006';
+  const API_URL = 'http://localhost:3006/api/movies';
   const handleChange = (event) => {
     setSearchInputValue(event.target.value);
     const newList = searchList.filter((data) => {

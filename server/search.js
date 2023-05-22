@@ -5,7 +5,7 @@ app.use(cors());
 const userList = [{ name: "test", id: 101 }];
 const movieList = require("./movies.json");
 console.log(movieList.length);
-app.get("/", (req, res) => {
+app.get("/api/movies", (req, res) => {
     console.log(req?.query);
     const { movieName } = req.query;
     let filteredMovies = movieList.filter(movie => movie?.title.toLowerCase().includes(movieName?.toLowerCase()))
